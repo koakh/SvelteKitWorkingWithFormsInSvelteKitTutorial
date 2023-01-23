@@ -14,6 +14,6 @@
 	}
 
 	:global(input, button) {
-		border-radius: 1rem;
+		border-radius: 0.5rem;
 	}
 </style>

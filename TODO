@@ -1,0 +1,4 @@
+Project:
+  ☐ use params toget token
+  ☐ use +page.server.ts to request api with PageServerLoad to validate token
+  ☐ use env variables api key, required for registerCustomer
