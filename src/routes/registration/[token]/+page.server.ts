@@ -6,6 +6,7 @@ import { z } from 'zod';
 import type { PageServerLoad } from './$types';
 import type { ValidateTokenStatus } from './types/enums';
 import type { Country } from './types/interfaces';
+import { REGEX_PASSWORD, REGEX_PASSWORD_MESSAGE } from '$lib/server';
 
 export type ValidateTokenData = {
   status: ValidateTokenStatus;
@@ -18,9 +19,7 @@ export type CountriesData = {
 
 const validationSchema = z.object({
 	email: z.string().trim().email().min(1),
-  // Minimum eight characters, at least one letter and one number:
-  // https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
-	password: z.string().trim().regex(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/),
+	password: z.string().trim().regex(REGEX_PASSWORD, REGEX_PASSWORD_MESSAGE),
 });
 
 export const load: PageServerLoad = async ({ params, fetch }) => {

@@ -6,9 +6,9 @@ const config: UserConfig = {
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},  
-  server: {
-    port: 8080,
-  }
+  // server: {
+  //   port: 8080,
+  // }
   // build: {
   //   sourcemap: true,
   // },
