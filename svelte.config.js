@@ -14,6 +14,21 @@ const config = {
   //   sourcemap: true,
   //   dev: true,
   // },
+  vitePlugin: {
+    experimental: {
+      // inspector: true,
+      inspector: {
+        // change shortcut
+        toggleKeyCombo: 'meta-shift',
+        // hold and release key to toggle inspector mode 
+        holdMode: true,
+        // show or hide the inspector option
+        showToggleButton: 'always',
+        // inspector position
+        toggleButtonPos: 'top-right',
+      },
+    },
+  },
 };
 
 export default config;

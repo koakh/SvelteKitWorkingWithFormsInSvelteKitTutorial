@@ -1,7 +1,7 @@
 import { fail, redirect, type Actions } from '@sveltejs/kit'
 import { zfd } from 'zod-form-data'
 import { z } from 'zod';
-import { REGEX_PASSWORD } from '$lib/server';
+import { REGEX_PASSWORD, REGEX_PASSWORD_MESSAGE } from '$lib/server';
 
 export const actions: Actions = {
   default: async ({ request }) => {
@@ -11,7 +11,7 @@ export const actions: Actions = {
     // define the validation schema
     const loginSchema = zfd.formData({
       user: zfd.text(z.string().min(8).max(16)),
-      password: zfd.text(z.string().trim().regex(REGEX_PASSWORD, 'invalid password, minimum eight characters, and at least one letter and one number'))
+      password: zfd.text(z.string().trim().regex(REGEX_PASSWORD, REGEX_PASSWORD_MESSAGE))
     })
 
     // parse the validation schema
