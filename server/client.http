@@ -1,0 +1,59 @@
+@proto = https
+@host = 127.0.0.1
+@port = 3443
+@uri = {{proto}}://{{host}}:{{port}}
+@contentType = application/json
+@tokenGuardKey = xqaTGS1Df46lHS6B378n3Omp1SC6EhLrHvaCck4byvO8Lqkz8lNaYG2v1lprVSoi
+
+### book: getBooks
+// @name getBooks
+GET {{uri}}/book HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bearer {{tokenGuardKey}}
+
+### book: getBook
+// @name getBook
+@getBookId = 1
+
+GET {{uri}}/book/{{getBookId}} HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bearer {{tokenGuardKey}}
+
+### book: createBook
+// @name createBook
+POST {{uri}}/book HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bearer {{tokenGuardKey}}
+
+{
+  "id": 213,
+  "title": "The Dark Mat",
+  "author": "Dickens, Charles",
+  "Genre": "fiction",
+  "height": 196,
+  "publisher": "vikas"
+}
+
+### book: updateBook
+// @name updateBook
+@updateBookId = 1
+
+PUT {{uri}}/book/{{updateBookId}} HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bearer {{tokenGuardKey}}
+
+{
+  "title": "The Path",
+  "author": "Dickens, Charles",
+  "Genre": "spirtitual",
+  "height": 221,
+  "publisher": "vikas"
+}
+
+### book: removeBook
+// @name removeBook
+@removeBookId = 2
+
+DELETE {{uri}}/book/{{removeBookId}} HTTP/1.1
+Content-Type: {{contentType}}
+Authorization: Bearer {{tokenGuardKey}}

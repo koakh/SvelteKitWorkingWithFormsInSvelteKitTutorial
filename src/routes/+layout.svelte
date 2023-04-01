@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SvgTouchId from '$lib/components/svg/SvgTouchId.svelte';
 	import ModalOverlay from '$lib/components/ModalOverlay.svelte';
 	import { isOverlayOpen } from '$lib/stores';
 	import '../app.css';
@@ -28,11 +29,14 @@
 {/if}
 
 <main>
+  <!-- example of using a svelte svg component -->
+  <svelte:component this={SvgTouchId} />
 	<slot />
 </main>
 
 <style lang="postcss">
 	:global(html) {
 		background-color: theme(colors.gray.200);
+    margin: 1.0rem;
 	}
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { applyAction, enhance, type SubmitFunction } from '$app/forms';
+  import CustomMessage, { MessageType } from '$lib/components/CustomMessage.svelte';
 
 	export let form;
 
@@ -24,6 +25,10 @@
 		};
 	};
 </script>
+
+<CustomMessage type={MessageType.WARN}>
+	<h1>Demo of CustomMessage component</h1>
+</CustomMessage>
 
 <form method="POST" action="/login-with-zod" use:enhance={login}>
   <!-- user -->

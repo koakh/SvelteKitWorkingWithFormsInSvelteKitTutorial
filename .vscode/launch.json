@@ -2,7 +2,30 @@
 	"version": "0.2.0",
 	"configurations": [
     {
-      "name": "Launch via NPM : Server Code",
+      "name": "Attach Server",
+      "port": 9227,
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch Server via NPM",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "debug"
+      ],
+      "cwd": "${workspaceFolder}/server",
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch SvelteKit SSR/CSR via NPM",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npm",

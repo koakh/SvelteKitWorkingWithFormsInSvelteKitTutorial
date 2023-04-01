@@ -29,7 +29,7 @@ export const actions: Actions = {
       return fail(400, data)
     }
 
-    // redirect the user
+    // if eveyrthing ok redirect the user to todos
     throw redirect(303, '/todos')
   }
 }

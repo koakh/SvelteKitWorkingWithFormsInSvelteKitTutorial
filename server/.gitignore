@@ -1,0 +1,12 @@
+.bak/
+.env
+.vscode/chrome/
+*.log
+bin/
+dist/
+downloads/
+local-modules/@koakh/
+node_modules*/
+node-client.log
+server.log
+volumes/
