@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getEnumIndexByEnumValue = (myEnum: any, enumValue: string | number): number => {
   return Object.keys(myEnum).findIndex((x) => myEnum[x] === enumValue);
 };

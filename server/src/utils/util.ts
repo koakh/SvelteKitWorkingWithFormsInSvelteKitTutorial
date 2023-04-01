@@ -3,6 +3,7 @@
  * @param enumType a typescript Type
  * @param enumValue string value
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getEnumKeyFromEnumValue = (enumType: any, enumValue: string | number): any => {
   const keys: string[] = Object.keys(enumType).filter((x) => enumType[x] === enumValue);
   if (keys.length > 0) {
@@ -19,6 +20,7 @@ export const getEnumKeyFromEnumValue = (enumType: any, enumValue: string | numbe
  * @param enumType a typescript Type
  * @param enumValue string value
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getEnumValueFromEnumKey = (enumType: any, enumKey: string | number): any => {
   // use getEnumKeyByEnumValue to get key from value
   const keys = Object.keys(enumType).filter((x) => getEnumKeyFromEnumValue(enumType, enumType[x]) === enumKey);
