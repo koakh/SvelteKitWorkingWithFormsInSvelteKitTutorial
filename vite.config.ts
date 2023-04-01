@@ -1,8 +1,12 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
+import { nodeLoaderPlugin } from '@vavite/node-loader/plugin';
 
 const config: UserConfig = {
-	plugins: [sveltekit()],
+	plugins: [
+    sveltekit(),
+    nodeLoaderPlugin(),
+  ],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	},

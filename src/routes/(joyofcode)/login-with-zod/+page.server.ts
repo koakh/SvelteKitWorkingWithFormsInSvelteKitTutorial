@@ -16,7 +16,7 @@ export const actions: Actions = {
 
     // parse the validation schema
     const result = loginSchema.safeParse(formData);
-    if (result.error) {
+    if (result.success === false) {
       console.log(`result.error.flatten().fieldErrors: [${JSON.stringify(result.error.flatten().fieldErrors, undefined, 2)}]`);
     }
 

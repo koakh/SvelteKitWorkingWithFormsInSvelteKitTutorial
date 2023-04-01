@@ -1,21 +1,21 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { ActionData, PageData } from './$types';
+	import type { ActionData } from './$types';
 
 	// props
 	export let form: ActionData;
 
 	const required = false;
-  console.log(`form: [${JSON.stringify(form, undefined, 2)}]`);
+	console.log(`form: [${JSON.stringify(form, undefined, 2)}]`);
 
 	$: console.log(form);
 </script>
 
 <form method="post" action="?/registration" use:enhance>
 	<input type="email" name="email" placeholder="Email" value={form?.email ?? ''} {required} />
-  {#if form?.missing}
-    <p class="error">This field is required</p>
-  {/if}  
+	{#if form?.missing}
+		<p class="error">This field is required</p>
+	{/if}
 	<input type="password" name="password" placeholder="Password" aria-label="Password" {required} />
 	<select name="role" aria-label="Role" {required}>
 		<option value="frontend-engineer">Frontend Engineer</option>
@@ -28,28 +28,27 @@
 </form>
 
 <style>
-  ul {
-    padding: 0;
-  }
+	ul {
+		padding: 0;
+	}
 
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-  span {
-    text-transform: capitalize;
-  }
+	span {
+		text-transform: capitalize;
+	}
 
-  .delete {
-    margin: 0;
-    background: none;
-    border: none;
-  }
+	.delete {
+		margin: 0;
+		background: none;
+		border: none;
+	}
 
-  .error {
-    color: tomato;
-  }
+	.error {
+		color: tomato;
+	}
 </style>
-

@@ -4,5 +4,4 @@ export const getAuthHeader = () => {
   return { 
     'Authorization': `Bearer ${API_KEY_SECRET}` 
   };
-
 }

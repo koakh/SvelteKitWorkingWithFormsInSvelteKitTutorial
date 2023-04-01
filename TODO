@@ -1,4 +1,10 @@
 Project:
-  ☐ use params toget token
-  ☐ use +page.server.ts to request api with PageServerLoad to validate token
-  ☐ use env variables api key, required for registerCustomer
+  ✔ add debug config @done(23-03-31 22:53)
+  ☐ @critical remove form form home page and create a page with links for playground pages
+  ☐ clk registration
+    ☐ @critical registration `getCountries<CountriesData>()` and `validateToken<ValidateTokenData>(token)` using moke data
+    ☐ @critical get latest form code
+    ☐ use params to get token
+    ☐ use +page.server.ts to request api with PageServerLoad to validate token
+    ☐ use env variables api key, required for registerCustomer
+  ☐ super form demo to compare with current forms

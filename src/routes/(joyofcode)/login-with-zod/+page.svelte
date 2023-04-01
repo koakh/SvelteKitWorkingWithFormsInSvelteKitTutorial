@@ -3,6 +3,8 @@
 	import type { ActionData } from '../login/$types';
 
 	export let form: ActionData;
+
+  $: console.log(`form: [${JSON.stringify(form, undefined, 2)}]`);
 </script>
 
 <form method="POST" use:enhance>

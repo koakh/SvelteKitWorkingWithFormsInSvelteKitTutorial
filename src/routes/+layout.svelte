@@ -4,6 +4,7 @@
 	import '../app.css';
 </script>
 
+<!-- modal overlay -->
 {#if $isOverlayOpen}
 	<ModalOverlay>
 		<div class="flex flex-row space-x-4">

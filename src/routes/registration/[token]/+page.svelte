@@ -1,10 +1,9 @@
 <script lang="ts">
 	import RegistrationForm from '$lib/components/RegistrationForm.svelte';
-	import type { ActionData, PageData } from './$types';
 	import { ValidateTokenStatus } from './types/enums';
 
-	export let data: PageData;
-	export let form: ActionData;
+	export let data;
+	export let form;
 
 	$: console.log(form);
 </script>

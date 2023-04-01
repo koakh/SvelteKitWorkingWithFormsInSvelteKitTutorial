@@ -17,7 +17,7 @@
 		>Open Modal with Event Forwarding</ButtonEventForwarding
 	>
 
-  <!-- Slot Props demo, let the parent of NameList control what should show-->
+  <!-- Slot Props demo, let the parent of NameList control what should show -->
 	<NameList>
 		<!-- slot props with let directive ex let:firstName and let:lastName -->
 		<h3 class="bg-blue-100" slot="hero" let:firstName let:lastName>

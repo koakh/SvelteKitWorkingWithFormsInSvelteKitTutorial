@@ -1,9 +1,8 @@
-import type { PageServerLoad } from './$types'
 import { fail, type Actions } from '@sveltejs/kit'
 
 import { addTodo, clearTodos, getTodos, removeTodo } from '$lib/server/database'
 
-export const load: PageServerLoad = async () => {
+export const load = async () => {
   const todos = getTodos()
   return { todos }
 }
